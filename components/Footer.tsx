@@ -40,7 +40,7 @@ export default function Footer() {
                 <li><Link href="/about" className="hover:text-walltrust-primary transition-colors">About Us</Link></li>
                 <li><Link href="/security" className="hover:text-walltrust-primary transition-colors">Security</Link></li>
                 <li><Link href="/contact" className="hover:text-walltrust-primary transition-colors">Contact</Link></li>
-                <li><Link href="/terms" className="hover:text-walltrust-primary transition-colors">Terms & Disclaimer</Link></li>
+                <li><Link href="/terms" className="hover:text-walltrust-primary transition-colors">Terms & Conditions</Link></li>
               </ul>
             </div>
 
@@ -66,20 +66,24 @@ export default function Footer() {
 
           {/* Divider */}
           <div className="border-t border-walltrust-border dark:border-walltrust-border-dark py-8">
-            {/* Disclaimer */}
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mb-6">
-              <p className="text-xs md:text-sm text-gray-800 dark:text-gray-200">
-                <span className="font-semibold">⚠️ Important Disclaimer:</span> Walltrust Capital is a <strong>fictional digital banking platform</strong> created for software development, educational, and portfolio demonstration purposes only. It is <strong>not a licensed financial institution</strong> and does not provide real banking services, process real money, or conduct actual financial transactions. No real funds should be used with this platform. For more information, please see our <Link href="/terms" className="text-walltrust-primary hover:underline">Terms & Disclaimer</Link> page.
+            {/* Legal Notice */}
+            <div className="bg-gradient-to-r from-walltrust-primary/5 to-walltrust-secondary/5 dark:from-walltrust-primary/10 dark:to-walltrust-secondary/10 border border-walltrust-primary/20 dark:border-walltrust-primary/30 rounded-lg p-6 mb-8">
+              <p className="text-xs md:text-sm text-gray-800 dark:text-gray-200 leading-relaxed">
+                Walltrust Capital is committed to providing secure and innovative financial solutions. Products and services are subject to applicable laws, eligibility requirements, and our Terms & Conditions. Please review all disclosures carefully before making financial decisions.
               </p>
             </div>
 
             {/* Bottom */}
-            <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600 dark:text-gray-400">
-              <p>&copy; {currentYear} Walltrust Capital. All rights reserved. | For Portfolio & Educational Use Only</p>
-              <div className="flex space-x-6 mt-4 sm:mt-0">
-                <Link href="/terms" className="hover:text-walltrust-primary transition-colors">Terms</Link>
-                <Link href="/privacy" className="hover:text-walltrust-primary transition-colors">Privacy</Link>
-                <a href="#" className="hover:text-walltrust-primary transition-colors">Twitter</a>
+            <div className="space-y-4 md:space-y-0 md:flex md:flex-col md:items-center">
+              <div className="flex flex-col md:flex-row justify-between items-center text-xs md:text-sm text-gray-600 dark:text-gray-400 w-full gap-4">
+                <p>&copy; {currentYear} Walltrust Capital. All rights reserved.</p>
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                  <Link href="/privacy" className="hover:text-walltrust-primary transition-colors">Privacy Policy</Link>
+                  <Link href="/terms" className="hover:text-walltrust-primary transition-colors">Terms & Conditions</Link>
+                  <Link href="/cookies" className="hover:text-walltrust-primary transition-colors">Cookie Policy</Link>
+                  <Link href="/security" className="hover:text-walltrust-primary transition-colors">Security</Link>
+                  <Link href="/contact" className="hover:text-walltrust-primary transition-colors">Contact Us</Link>
+                </div>
               </div>
             </div>
           </div>
