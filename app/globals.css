@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply scroll-smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply transition-colors duration-300;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-walltrust-primary to-walltrust-secondary bg-clip-text text-transparent;
+}
+
+.btn-primary {
+  @apply px-6 py-3 bg-walltrust-primary text-white rounded-lg font-semibold hover:bg-walltrust-primary-dark transition-all duration-300 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border-2 border-walltrust-primary text-walltrust-primary rounded-lg font-semibold hover:bg-walltrust-primary hover:text-white transition-all duration-300;
+}
+
+.card-premium {
+  @apply bg-walltrust-card dark:bg-walltrust-card-dark rounded-2xl border border-walltrust-border dark:border-walltrust-border-dark shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20;
+}
