@@ -10,14 +10,14 @@ interface FeatureCardProps {
 export default function FeatureCard({ icon, title, description, delay = 0 }: FeatureCardProps) {
   return (
     <div
-      className="card-premium p-6 animate-fade-in"
+      className="glass-card p-8 animate-fade-in"
       style={{ animationDelay: `${delay * 0.1}s` }}
     >
-      <div className="w-12 h-12 bg-gradient-to-br from-walltrust-primary to-walltrust-secondary rounded-lg flex items-center justify-center mb-4 text-white">
+      <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-walltrust-secondary/10 text-walltrust-secondary shadow-xl mb-5 transition-all duration-300 group-hover:scale-105">
         {icon}
       </div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 dark:text-gray-400 text-sm">{description}</p>
+      <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+      <p className="text-gray-300 leading-7">{description}</p>
     </div>
   );
 }

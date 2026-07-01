@@ -11,25 +11,34 @@ html {
 }
 
 body {
-  @apply transition-colors duration-300;
+  @apply transition-colors duration-300 bg-walltrust-background text-walltrust-text antialiased;
+}
+
+::selection {
+  @apply bg-walltrust-secondary/30 text-white;
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-walltrust-primary to-walltrust-secondary bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-walltrust-secondary to-walltrust-primary bg-clip-text text-transparent;
 }
 
 .btn-primary {
-  @apply px-6 py-3 bg-walltrust-primary text-white rounded-lg font-semibold hover:bg-walltrust-primary-dark transition-all duration-300 hover:shadow-lg;
+  @apply inline-flex items-center justify-center px-7 py-3 rounded-full bg-walltrust-secondary text-slate-950 font-semibold shadow-[0_20px_60px_rgba(199,185,94,0.24)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_25px_70px_rgba(199,185,94,0.28)];
 }
 
 .btn-secondary {
-  @apply px-6 py-3 border-2 border-walltrust-primary text-walltrust-primary rounded-lg font-semibold hover:bg-walltrust-primary hover:text-white transition-all duration-300;
+  @apply inline-flex items-center justify-center px-7 py-3 rounded-full border border-walltrust-secondary/25 bg-white/5 text-white font-semibold transition duration-300 hover:border-walltrust-secondary hover:text-walltrust-secondary;
 }
 
 .card-premium {
-  @apply bg-walltrust-card dark:bg-walltrust-card-dark rounded-2xl border border-walltrust-border dark:border-walltrust-border-dark shadow-lg hover:shadow-xl transition-all duration-300;
+  @apply rounded-[2rem] border border-white/10 bg-walltrust-card/80 dark:bg-walltrust-card-dark/80 shadow-[0_30px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_rgba(0,0,0,0.32)];
+}
+
+.glass-card {
+  @apply bg-white/5 border border-white/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.16)] rounded-[2rem] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(0,0,0,0.22)];
 }
 
 .section-padding {
   @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20;
 }
+
